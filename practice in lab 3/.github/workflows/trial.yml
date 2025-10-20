@@ -1,0 +1,14 @@
+name : trial
+on:
+  push:
+    branches : [main]
+  workflow_dispatch:
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout the code
+        uses: actions/chechout@v3
+      - name: print greeting
+        run: echo "hello rania"
